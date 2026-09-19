@@ -1,175 +1,224 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ASNIAH Gold Buy and Sale</title>
-    <style>
-        * {
-            box-sizing: border-box;
-        }
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #050505;
-            color: white;
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 18px;
-        }
-        .card {
-            width: 100%;
-            max-width: 400px;
-            background: #111;
-            border: 1px solid #c9a227;
-            border-radius: 24px;
-            padding: 28px 22px;
-            text-align: center;
-            box-shadow: 0 8px 35px rgba(212,175,55,0.20);
-        }
-        .profile {
-            width: 115px;
-            height: 115px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 3px solid #d4af37;
-            padding: 3px;
-            margin-bottom: 12px;
-        }
-        h1 {
-            margin: 5px 0;
-            color: #d4af37;
-            font-size: 27px;
-            letter-spacing: 1px;
-        }
-        .business {
-            font-size: 17px;
-            font-weight: bold;
-            margin-bottom: 6px;
-        }
-        .subtitle {
-            color: #aaa;
-            font-size: 13px;
-            margin-bottom: 24px;
-        }
-        .details {
-            text-align: left;
-            border-top: 1px solid #333;
-            border-bottom: 1px solid #333;
-            padding: 12px 5px;
-            margin-bottom: 22px;
-        }
-        .details p {
-            margin: 12px 0;
-            font-size: 14px;
-            line-height: 1.5;
-        }
-        .label {
-            color: #d4af37;
-            font-weight: bold;
-        }
-        .repair {
-            color: #d4af37;
-            font-size: 14px;
-            font-weight: bold;
-            margin-bottom: 20px;
-        }
-        .buttons {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-        .buttons a {
-            text-decoration: none;
-            padding: 13px;
-            border-radius: 10px;
-            font-size: 14px;
-            font-weight: bold;
-        }
-        .call {
-            background: #d4af37;
-            color: #000;
-        }
-        .facebook {
-            background: #1877f2;
-            color: white;
-        }
-        .tiktok {
-            background: #222;
-            color: white;
-            border: 1px solid #444;
-        }
-        .location {
-            background: #222;
-            color: #d4af37;
-            border: 1px solid #d4af37;
-        }
-        .footer {
-            margin-top: 20px;
-            color: #666;
-            font-size: 11px;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ASNIAH Gold Buy and Sale</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: #050505;
+    color: white;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.card {
+    width: 100%;
+    max-width: 390px;
+    background: #111;
+    border: 1px solid #d4af37;
+    border-radius: 25px;
+    padding: 30px 22px;
+    text-align: center;
+    box-shadow: 0 10px 35px rgba(212,175,55,0.20);
+}
+
+.profile {
+    width: 125px;
+    height: 125px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #d4af37;
+    padding: 3px;
+    margin-bottom: 15px;
+}
+
+h1 {
+    margin: 0;
+    color: #d4af37;
+    font-size: 30px;
+    letter-spacing: 2px;
+}
+
+.business {
+    margin-top: 7px;
+    color: #ddd;
+    font-size: 15px;
+}
+
+.location {
+    margin-top: 22px;
+    color: #ccc;
+    font-size: 14px;
+}
+
+.repair {
+    margin-top: 22px;
+    padding: 12px;
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+    color: #d4af37;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.buttons {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+}
+
+.buttons a,
+.call-button {
+    width: 100%;
+    padding: 14px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    display: block;
+}
+
+.call-button {
+    background: #d4af37;
+    color: #000;
+}
+
+.facebook {
+    background: #1877f2;
+    color: white;
+}
+
+.tiktok {
+    background: #222;
+    color: white;
+    border: 1px solid #444 !important;
+}
+
+.map {
+    background: #222;
+    color: #d4af37;
+    border: 1px solid #d4af37 !important;
+}
+
+.footer {
+    margin-top: 22px;
+    color: #666;
+    font-size: 11px;
+}
+
+#phone-options {
+    display: none;
+    margin-top: 10px;
+}
+
+.phone {
+    display: block;
+    background: #222;
+    color: white;
+    padding: 11px;
+    margin-top: 7px;
+    border-radius: 9px;
+    text-decoration: none;
+    font-size: 14px;
+}
+</style>
 </head>
+
 <body>
+
 <div class="card">
+
     <img
         class="profile"
         src="att._f5AR_ItghbXOusp9bH8PKn5EYZ2_XHSjDWBgyrt8kI.png.jpeg"
-        alt="Asniah T."
+        alt="ASNIAH"
     >
-    <h1>ASNIAH T.</h1>
+
+    <h1>ASNIAH</h1>
+
     <div class="business">
-        ASNIAH Gold Buy and Sale
+        Gold Buying • Gold Selling
     </div>
-    <div class="subtitle">
-        Gold Buying • Gold Selling • Gold Repair
+
+    <div class="location">
+        📍 Marawi City / Iligan City
     </div>
-    <div class="details">
-        <p>
-            📍 <span class="label">Location</span><br>
-            Marawi City / Iligan City
-        </p>
-        <p>
-            💎 <span class="label">Service</span><br>
-            We also repair damaged gold.
-        </p>
-        <p>
-            📞 <span class="label">Contact</span><br>
-            0945 134 3033 &nbsp;|&nbsp; 0910 913 6534
-        </p>
+
+    <div class="repair">
+        ✨ WE ALSO REPAIR DAMAGED GOLD ✨
     </div>
+
     <div class="buttons">
-        <a class="call" href="tel:09451343033">
-            📞 Call 0945 134 3033
-        </a>
-        <a class="call" href="tel:09109136534">
-            📞 Call 0910 913 6534
-        </a>
+
+        <button class="call-button" onclick="showPhones()">
+            📞 Call
+        </button>
+
+        <div id="phone-options">
+            <a class="phone" href="tel:09451343033">
+                0945 134 3033
+            </a>
+
+            <a class="phone" href="tel:09109136534">
+                0910 913 6534
+            </a>
+        </div>
+
         <a
             class="facebook"
             href="https://www.facebook.com/Asnieeee?mibextid=ZbWKwL"
             target="_blank">
             📘 Facebook
         </a>
+
         <a
             class="tiktok"
             href="https://www.tiktok.com/@jash.shop143"
             target="_blank">
-            🎵 TikTok
+            ♪ TikTok
         </a>
+
         <a
-            class="location"
+            class="map"
             href="https://www.google.com/maps/search/?api=1&query=Marawi+City+Iligan+City"
             target="_blank">
             📍 Location
         </a>
+
     </div>
+
     <div class="footer">
         Digital Business Card
     </div>
+
 </div>
+
+<script>
+function showPhones() {
+    var options = document.getElementById("phone-options");
+
+    if (options.style.display === "block") {
+        options.style.display = "none";
+    } else {
+        options.style.display = "block";
+    }
+}
+</script>
+
 </body>
 </html>
